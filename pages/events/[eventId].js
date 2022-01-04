@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { Fragment } from 'react/cjs/react.production.min';
-import { getEventById } from '../dummy-data';
+import { getEventById } from '../../dummy-data';
 import EventSummary from '../../components/event-detail/event-summary';
 import EventLogistics from '../../components/event-detail/event-logistics';
 import EventContent from '../../components/event-detail/event-content';
