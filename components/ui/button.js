@@ -4,9 +4,14 @@ import styles from './button.module.css';
 // the anchor tag is purely to be able to customise the styling of the Link internal nextjs Component.
 
 const Button = (props) => {
-    return <Link href={props.link}>
-        <a className={styles.btn}>{props.children}</a>
-    </Link>
+    if (props.link) {
+        return <Link href={props.link}>
+            <a className={styles.btn}>{props.children}</a>
+        </Link>
+    }
+    return <button onClick={props.onClick} className={styles.btn}>
+        {props.children}
+    </button>
 }
 
 export default Button;
